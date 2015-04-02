@@ -145,7 +145,7 @@ LeanCloud 的离线数据分析服务基于 Spark SQL，目前支持 HiveQL 的�
 
 	select avg(age) from _User
 
-	select GameScore.objectId from GameScore left join _User where _User.name=GameScore.name limit 10
+	select GameScore.objectId from GameScore inner join _User where _User.name=GameScore.name limit 10
 
 	select * from _User where name in (select name form OtherUser)
 
